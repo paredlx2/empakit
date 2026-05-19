@@ -210,8 +210,11 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="glass px-4 py-2 rounded-full text-empakit-brand text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2 mb-6">
-                  <span className="w-2 h-2 bg-empakit-brand rounded-full animate-ping" />
+                <span 
+                  className="glass px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2 mb-6"
+                  style={{ color: "#3d90d6" }}
+                >
+                  <span className="w-2 h-2 rounded-full animate-ping" style={{ backgroundColor: "#3d90d6" }} />
                   Eco-Innovación en Guatemala
                 </span>
                 <h1 className="text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8">
