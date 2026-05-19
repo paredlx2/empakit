@@ -28,7 +28,7 @@ const products = [
     id: "tapes",
     title: "Cintas Industriales",
     description: "Cintas adhesivas industriales de alta adherencia diseñadas para soportar condiciones extremas en Guatemala, garantizando que tu carga llegue intacta.",
-    image: "/src/assets/images/regenerated_image_1778445362006.png",
+    image: "https://raw.githubusercontent.com/paredlx2/empakit/main/src/assets/images/regenerated_image_1778445362006.png",
     tags: ["Industrial", "Extra Adhesión"],
     color: "from-empakit-brand/20"
   },
