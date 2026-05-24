@@ -1,19 +1,1989 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empakit | Empaque Industrial Eco-Moderno en Guatemala</title>
-    <meta name="description" content="Líderes en empaque industrial en Guatemala. Ofrecemos stretch film, cintas adhesivas y plástico de burbuja eco-moderno para proteger tus productos y el planeta." />
-    <meta name="keywords" content="empaque industrial Guatemala, stretch film Guatemala, cintas adhesivas industriales, plastico burbuja, empaques eco-friendly, suministros de empaque, Empakit" />
-    <meta property="og:title" content="Empakit | Empaque Industrial Eco-Moderno" />
-    <meta property="og:description" content="Protección superior con materiales sustentables en Guatemala. Cintas, Stretch Film y Burbuja." />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://empakit.gt" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+    <meta name="description" content="Líderes en empaque industrial en Guatemala. Stretch film, cintas adhesivas y plástico de burbuja sustentable de alto rendimiento para su operación.">
+    <meta name="keywords" content="empaque industrial Guatemala, stretch film Guatemala, cintas adhesivas industriales, plastico burbuja, empaques eco-friendly, suministros de empaque, Empakit">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Empakit | Empaque Industrial Eco-Moderno">
+    <meta property="og:description" content="Protección superior con materiales sustentables en Guatemala. Stretch Film, Cintas de Alta Adherencia y Eco-Burbuja.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <link rel="canonical" href="https://empakit.gt">
 
+    <!-- Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/dist/tabler-icons.min.css">
+
+    <!-- Brand CSS System -->
+    <style>
+        :root {
+            --color-primary: #0F6E56;
+            --color-primary-light: #E1F5EE;
+            --color-primary-muted: #5DCAA5;
+            --color-accent: #378ADD;
+            --color-accent-light: #E6F1FB;
+            --color-accent-dark: #0C447C;
+            --color-cta: #5DCAA5;
+            --color-cta-text: #04342C;
+            --color-dark: #1A1A1A;
+            --color-gray-mid: #4A4A4A;
+            --color-gray-light: #9A9A9A;
+            --color-surface: #F4F7FA;
+            --color-white: #FFFFFF;
+        }
+
+        /* Essential Reset and Base Settings */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 84px; /* Offset to prevent sticky navbar overlap */
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--color-gray-mid);
+            background-color: var(--color-surface);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography & Custom Headings */
+        h1, h2, h3, h4 {
+            color: var(--color-dark);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        /* Utility Layouts */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* Button Framework */
+        .btn {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 12px 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            text-align: center;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-primary {
+            background-color: var(--color-cta);
+            color: var(--color-cta-text);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.92;
+            box-shadow: 0 4px 15px rgba(93, 202, 165, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--color-gray-mid);
+            color: var(--color-gray-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: var(--color-gray-light);
+            color: var(--color-white);
+        }
+
+        .btn-compact {
+            padding: 8px 18px;
+            font-size: 13px;
+        }
+
+        /* 1. NAVBAR STYLING (IMPROVED UX/UI) */
+        header.nav-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1001; /* Layer on top of everything including mobile backdrop */
+            background-color: rgba(15, 110, 86, 0.85); /* Premium translucent Teal */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        header.nav-header.scrolled {
+            padding: 12px 0;
+            background-color: rgba(15, 110, 86, 0.95);
+            box-shadow: 0 10px 30px rgba(4, 34, 28, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--color-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: flex;
+            align-items: center;
+            transition: opacity 0.2s ease;
+        }
+        
+        .logo:hover {
+            opacity: 0.9;
+        }
+
+        .logo-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-primary-muted);
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            transition: all 0.25s ease;
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-white);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 2.5px;
+            background-color: var(--color-primary-muted);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* Hamburger button for mobile scale with state transform */
+        .mobile-toggle {
+            display: none;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: var(--color-white);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 8px;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+        
+        .mobile-toggle:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Mobile drawer navigation overlay - improved slide down and blur */
+        .mobile-drawer {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(4, 52, 44, 0.98); /* Deep premium forest green background */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 2px solid rgba(93, 202, 165, 0.3);
+            padding: 100px 24px 36px 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            z-index: 1000;
+            flex-direction: column;
+            gap: 16px;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.32s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .mobile-drawer.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-drawer .nav-link {
+            font-size: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mobile-drawer .nav-link::after {
+            display: none; /* Hide standard underline */
+        }
+
+        .mobile-drawer .nav-link.active::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-primary-muted);
+            border-radius: 50%;
+        }
+
+        /* 2. HERO SECTION STYLING */
+        .hero {
+            background-color: var(--color-dark);
+            padding: 160px 0 100px 0;
+            position: relative;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            color: var(--color-white);
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: var(--color-gray-light);
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .trust-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--color-primary-muted);
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 16px;
+            padding-top: 24px;
+            border-t: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .trust-dot {
+            width: 4px;
+            height: 4px;
+            background-color: var(--color-primary-muted);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        /* Abstract Tech Graphic Animation */
+        .hero-graphic {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .concentric-container {
+            width: 280px;
+            height: 280px;
+            position: relative;
+            animation: rotateGraphic 20s linear infinite;
+        }
+
+        .square-accent {
+            position: absolute;
+            border-radius: 20px;
+            border: 2px solid;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .square-1 {
+            width: 260px;
+            height: 260px;
+            border-color: rgba(93, 202, 165, 0.45);
+            background: rgba(93, 202, 165, 0.02);
+            box-shadow: 0 0 25px rgba(93, 202, 165, 0.15), inset 0 0 15px rgba(93, 202, 165, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .square-1:hover {
+            border-color: var(--color-primary-muted);
+            box-shadow: 0 0 35px rgba(93, 202, 165, 0.35), inset 0 0 25px rgba(93, 202, 165, 0.1);
+            transform: translate(-50%, -50%) scale(1.04);
+        }
+
+        .square-2 {
+            width: 190px;
+            height: 190px;
+            border-color: rgba(55, 138, 221, 0.45);
+            background: rgba(55, 138, 221, 0.01);
+            box-shadow: 0 0 20px rgba(55, 138, 221, 0.1);
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .square-2:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 30px rgba(55, 138, 221, 0.25);
+            transform: translate(-50%, -50%) rotate(60deg) scale(1.04);
+        }
+
+        .square-3 {
+            width: 120px;
+            height: 120px;
+            border-color: var(--color-primary-muted);
+            background: rgba(4, 52, 44, 0.2);
+            box-shadow: 0 0 30px rgba(93, 202, 165, 0.25), inset 0 0 10px rgba(93, 202, 165, 0.15);
+            transform: translate(-50%, -50%) rotate(90deg);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .square-3:hover {
+            border-color: var(--color-white);
+            box-shadow: 0 0 40px rgba(93, 202, 165, 0.45), inset 0 0 20px rgba(93, 202, 165, 0.25);
+            transform: translate(-50%, -50%) rotate(120deg) scale(1.06);
+        }
+
+        .graphic-nodes {
+            position: absolute;
+            background-color: var(--color-accent);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--color-accent);
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rotateGraphic {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 5. HERO CAROUSEL STYLING */
+        .hero-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(4, 34, 28, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
+            background-color: rgba(4, 52, 44, 0.4);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .carousel-track-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+            transition: transform 6s ease;
+        }
+
+        .carousel-slide.active img {
+            transform: scale(1.08);
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(4, 34, 28, 0.95) 0%, rgba(4, 34, 28, 0.4) 60%, transparent 100%);
+            padding: 32px 24px 24px 24px;
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .carousel-tag {
+            align-self: flex-start;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            background: rgba(93, 202, 165, 0.2);
+            color: var(--color-primary-muted);
+            padding: 4px 10px;
+            border-radius: 50px;
+            border: 1px solid rgba(93, 202, 165, 0.3);
+        }
+
+        .carousel-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 4px 0 2px 0;
+            letter-spacing: -0.01em;
+        }
+
+        .carousel-desc {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.4;
+        }
+
+        /* Controls */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(4, 52, 44, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .carousel-btn:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary-muted);
+            box-shadow: 0 0 15px rgba(93, 202, 165, 0.3);
+        }
+
+        .carousel-btn-prev {
+            left: 16px;
+        }
+
+        .carousel-btn-next {
+            right: 16px;
+        }
+
+        .hero-carousel:hover .carousel-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Dots Indicator */
+        .carousel-indicators {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .carousel-dot.active {
+            background: var(--color-primary-muted);
+            width: 24px;
+            border-radius: 4px;
+            box-shadow: 0 0 8px var(--color-primary-muted);
+        }
+
+        /* 3. PRODUCTS SECTION STYLING */
+        .products-section {
+            background-color: var(--color-white);
+            padding: 96px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 64px auto;
+        }
+
+        .section-header .eyebrow {
+            color: var(--color-primary);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .product-card {
+            background-color: var(--color-white);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s ease;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+        }
+
+        /* Dynamic Top Accent Bar customisable */
+        .card-top-bar {
+            height: 4px;
+            width: 100%;
+        }
+
+        .bar-eco {
+            background-color: var(--color-primary);
+        }
+
+        .bar-tech {
+            background-color: var(--color-accent);
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card:hover .card-top-bar.bar-eco {
+            background-color: var(--color-primary-muted);
+        }
+
+        .product-card:hover .card-top-bar.bar-tech {
+            background-color: var(--color-accent);
+            filter: brightness(1.2);
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.06);
+        }
+
+        .card-body {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-icon-container {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: var(--color-primary-light);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: var(--color-gray-mid);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-eco {
+            background-color: var(--color-primary-light);
+            color: #085041;
+        }
+
+        .badge-tech {
+            background-color: var(--color-accent-light);
+            color: var(--color-accent-dark);
+        }
+
+        .card-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s ease, color 0.2s ease;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .card-link:hover {
+            gap: 10px;
+            color: var(--color-accent-dark);
+        }
+
+        /* 4. TECH FEATURES SECTION */
+        .features-section {
+            background-color: var(--color-surface);
+            padding: 96px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 16px;
+        }
+
+        .feature-block {
+            background-color: var(--color-white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .feature-blue {
+            background-color: var(--color-accent-light);
+            color: var(--color-accent);
+        }
+
+        .feature-teal {
+            background-color: var(--color-primary-light);
+            color: var(--color-primary);
+        }
+
+        .feature-block h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+
+        .feature-block p {
+            font-size: 14px;
+            color: var(--color-gray-mid);
+            line-height: 1.6;
+        }
+
+        /* 5. STATS SECTION STYLING */
+        .stats-section {
+            background-color: var(--color-primary);
+            padding: 80px 0;
+            color: var(--color-white);
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 24px;
+            position: relative;
+        }
+
+        /* Vertical dividers */
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1;
+            color: var(--color-white);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--color-primary-muted);
+            font-weight: 500;
+        }
+
+        .stats-tagline {
+            text-align: center;
+            font-style: italic;
+            font-size: 15px;
+            color: var(--color-primary-muted);
+            margin-top: 48px;
+            display: block;
+        }
+
+        /* 6. TECH TRUST SECTION */
+        .tech-trust-section {
+            background-color: var(--color-dark);
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        .tech-trust-title {
+            font-size: 12px;
+            color: var(--color-gray-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .standards-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .standard-badge {
+            border: 1px solid #2A2A2A;
+            border-radius: 6px;
+            padding: 12px 32px;
+            font-size: 14px;
+            color: var(--color-gray-light);
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.01);
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+
+        .standard-badge:hover {
+            border-color: var(--color-accent);
+            color: var(--color-white);
+        }
+
+        /* 7. CTA BANNER STYLING */
+        .cta-banner {
+            padding: 80px 0;
+            background-color: var(--color-dark);
+            position: relative;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--color-accent);
+        }
+
+        .cta-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .cta-info {
+            max-width: 600px;
+        }
+
+        .cta-headline {
+            font-size: 28px;
+            color: var(--color-white);
+            margin-bottom: 12px;
+        }
+
+        .cta-subtext {
+            font-size: 16px;
+            color: var(--color-gray-light);
+        }
+
+        .cta-btn-xl {
+            padding: 14px 32px;
+            font-size: 16px;
+            border-radius: 6px;
+            box-shadow: 0 8px 25px rgba(93, 202, 165, 0.35);
+        }
+
+        /* 8. FOOTER STYLING */
+        footer.page-footer {
+            background-color: var(--color-dark);
+            border-top: 1px solid var(--color-accent);
+            padding: 80px 0 32px 0;
+            color: var(--color-gray-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 64px;
+            margin-bottom: 64px;
+        }
+
+        .footer-logo-block {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            color: var(--color-gray-light);
+            line-height: 1.6;
+        }
+
+        .footer-col h4 {
+            color: var(--color-white);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link-item a {
+            color: var(--color-gray-light);
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        .footer-link-item a:hover {
+            color: var(--color-cta);
+        }
+
+        .footer-contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .footer-contact-item {
+            font-size: 14px;
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-contact-item i {
+            color: var(--color-accent);
+            font-size: 18px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--color-gray-mid);
+        }
+
+        .footer-made {
+            font-size: 12px;
+            color: var(--color-gray-mid);
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--color-cta);
+            color: var(--color-cta-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 8px 25px rgba(93, 202, 165, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            animation: floatPulse 2s infinite ease-in-out;
+            transition: transform 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes floatPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 8px 25px rgba(93, 202, 165, 0.4);
+            }
+            50% {
+                transform: scale(1.08);
+                box-shadow: 0 8px 35px rgba(93, 202, 165, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 25px rgba(93, 202, 165, 0.4);
+            }
+        }
+
+        /* INTERACTIVE SPECIFICATION MODAL STYLING */
+        .spec-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .spec-modal.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background-color: var(--color-white);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 640px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            animation: modalEntrance 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes modalEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(16px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-header {
+            padding: 24px 32px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            color: var(--color-white);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 24px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.15s ease;
+        }
+
+        .modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .modal-body {
+            padding: 32px;
+        }
+
+        .spec-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            gap: 24px;
+        }
+
+        .spec-label {
+            font-weight: 500;
+            color: var(--color-dark);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .spec-value {
+            color: var(--color-gray-mid);
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .modal-actions .btn {
+            flex-grow: 1;
+        }
+
+        /* Placeholder graphic containers in page */
+        .color-graphic-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: var(--color-primary-light);
+            border-radius: 8px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--color-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-graphic-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background-image: radial-gradient(var(--color-primary) 1.5px, transparent 1.5px);
+            background-size: 16px 16px;
+        }
+
+        .placeholder-tech {
+            background-color: var(--color-accent-light);
+            color: var(--color-accent);
+        }
+
+        .placeholder-tech::after {
+            background-image: radial-gradient(var(--color-accent) 1.5px, transparent 1.5px);
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE STYLE overrides
+           ═══════════════════════════════════════ */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-graphic {
+                display: none; /* Hide graphic on lower resolutions */
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links, .nav-right .btn {
+                display: none;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stat-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .cta-container {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Beautiful Scroll Progress Indicator (UX/UI Touch) -->
+    <div id="scrollProgress" style="position: fixed; top: 0; left: 0; height: 3px; background: var(--color-accent); z-index: 1002; width: 0%; transition: width 0.1s ease;"></div>
+
+    <!-- 1. NAVBAR -->
+    <header class="nav-header" id="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo with Brand Generated Icon -->
+            <a href="#hero" class="logo" aria-label="Volver al inicio - Empakit">
+                <svg class="logo-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-right: 8px;">
+                    <!-- Geometric Box representing packaging -->
+                    <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 2v10M3 7l9 5 9-5" stroke="currentColor" stroke-dasharray="1.5 1.5" stroke-width="1.5" />
+                    <!-- Eco-friendly leaf representation inside the cubic structure -->
+                    <path d="M12 12c1.8-2 4-2.5 5.5-1.5 1.5 1 1 3.5-.5 5.5s-4 2-5 2c-1 0-2-.5-1.5-2.5.5-2 1.5-3.5 1.5-3.5z" fill="#5DCAA5" />
+                    <circle cx="12" cy="12" r="1" fill="#FFFFFF" />
+                </svg>
+                <span>empakit</span><span class="logo-dot"></span>
+            </a>
+
+            <!-- Nav Links center -->
+            <div class="nav-links">
+                <a href="#productos" class="nav-link">Productos</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <!-- Navbar Right CTA -->
+            <div class="nav-right">
+                <a href="https://wa.me/50230467777" class="btn btn-primary btn-compact">Cotizar ahora</a>
+                <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <i class="ti ti-menu-2"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay Mobile Click-to-Dismiss Backdrop -->
+    <div id="mobileBackdrop" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(4, 34, 28, 0.4); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); z-index: 998; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;" onclick="closeDrawer()"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#productos" class="nav-link" onclick="closeDrawer()">Productos</a>
+        <a href="#nosotros" class="nav-link" onclick="closeDrawer()">Nosotros</a>
+        <a href="#contacto" class="nav-link" onclick="closeDrawer()">Contacto</a>
+        <a href="https://wa.me/50230467777" class="btn btn-primary" onclick="closeDrawer()">
+            <i class="ti ti-brand-whatsapp"></i> Cotizar por WhatsApp
+        </a>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="eyebrow" style="color: var(--color-primary-muted);">TECNOLOGÍA · EMPAQUE · GUATEMALA</span>
+                <h1 class="hero-title">Empaque industrial inteligente para tu operación.</h1>
+                <p class="hero-subtitle">Stretch film, cintas y burbuja eco-moderna con entrega en 24 horas en Guatemala. Optimización de materiales que ahorran dinero y residuos estructurales.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Cotizar ahora</a>
+                    <a href="#productos" class="btn btn-secondary">Ver catálogo</a>
+                </div>
+                <div class="trust-bar">
+                    <span>Entrega 24h</span>
+                    <span class="trust-dot"></span>
+                    <span>Materiales certificados</span>
+                    <span class="trust-dot"></span>
+                    <span>+500 empresas</span>
+                </div>
+            </div>
+            
+            <!-- Dynamic Sliding Media Carousel showing Product Uses (Eco-Modern Style) -->
+            <div class="hero-graphic">
+                <div class="hero-carousel" id="heroCarousel">
+                    <!-- Dots Indicators -->
+                    <div class="carousel-indicators" id="carouselIndicators">
+                        <span class="carousel-dot active" onclick="goToSlide(0)" aria-label="Ver slide 1"></span>
+                        <span class="carousel-dot" onclick="goToSlide(1)" aria-label="Ver slide 2"></span>
+                        <span class="carousel-dot" onclick="goToSlide(2)" aria-label="Ver slide 3"></span>
+                    </div>
+
+                    <!-- Left / Right Controls -->
+                    <button class="carousel-btn carousel-btn-prev" onclick="prevSlide()" aria-label="Diapositiva anterior">
+                        <i class="ti ti-chevron-left" style="font-size: 20px;"></i>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+                        <i class="ti ti-chevron-right" style="font-size: 20px;"></i>
+                    </button>
+
+                    <!-- Slides Track -->
+                    <div class="carousel-track-container">
+                        <div class="carousel-track" id="carouselTrack">
+                            
+                            <!-- Slide 1: Stretch Film Pro -->
+                            <div class="carousel-slide active">
+                                <img src="src/assets/images/stretch_film_use_1779642304244.png" alt="Aplicación de Stretch Film en pallets" referrerPolicy="no-referrer">
+                                <div class="carousel-overlay">
+                                    <span class="carousel-tag">Aplicación Logística</span>
+                                    <h3 class="carousel-title">Fijación de Carga Robusta</h3>
+                                    <p class="carousel-desc">Nuestro stretch film de alta elasticidad consolida tarimas industriales previniendo deslizamientos y optimizando espacio.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Cintas Industriales Kraft -->
+                            <div class="carousel-slide">
+                                <img src="src/assets/images/adhesive_tape_use_1779642318435.png" alt="Sellado de cajas con cinta Kraft" referrerPolicy="no-referrer">
+                                <div class="carousel-overlay">
+                                    <span class="carousel-tag">Sustentable</span>
+                                    <h3 class="carousel-title">Sellado de Corrugado Pesado</h3>
+                                    <p class="carousel-desc">Cinta de papel kraft ecológico con adhesión molecular base agua para embalajes de alta resistencia.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Cojín de aire & Honeycomb -->
+                            <div class="carousel-slide">
+                                <img src="src/assets/images/bubble_wrap_use_1779642333313.png" alt="Protección interna con honeycomb" referrerPolicy="no-referrer">
+                                <div class="carousel-overlay">
+                                    <span class="carousel-tag">Seguridad</span>
+                                    <h3 class="carousel-title">Amortiguación Antimpacto</h3>
+                                    <p class="carousel-desc">Protección biodegradable que se adapta a productos frágiles y reduce el peso volumétrico del envío.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PRODUCTS SECTION -->
+    <section class="products-section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">CATÁLOGO DE PRODUCTOS</span>
+                <h2>Soluciones de empaque para cada operación</h2>
+            </div>
+            
+            <div class="product-grid">
+                
+                <!-- Card 1: Stretch Film -->
+                <div class="product-card">
+                    <div class="card-top-bar bar-eco"></div>
+                    <div class="card-body">
+                        <div class="color-graphic-placeholder">
+                            <img src="src/assets/images/stretch_film_pro_1779641702911.png" alt="Stretch Film Pro" class="product-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); filter: brightness(0.95);" referrerPolicy="no-referrer">
+                        </div>
+                        <div class="badge-container">
+                            <span class="badge badge-eco">Eco-reciclable</span>
+                            <span class="badge badge-tech">Alta resistencia</span>
+                        </div>
+                        <h3>Stretch Film Pro</h3>
+                        <p class="product-desc">Película estirable tecnológica con memoria elástica avanzada. Reduce los aportes plásticos por tarima hasta un 40% manteniendo óptimo agarre logístico.</p>
+                        <button class="card-link" onclick="openSpecModal('stretch')">Ver detalles &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Cintas Adhesivas -->
+                <div class="product-card">
+                    <div class="card-top-bar bar-tech"></div>
+                    <div class="card-body">
+                        <div class="color-graphic-placeholder">
+                            <img src="src/assets/images/adhesive_tapes_options_1779641854359.png" alt="Cintas Adhesivas" class="product-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); filter: brightness(0.95);" referrerPolicy="no-referrer">
+                        </div>
+                        <div class="badge-container">
+                            <span class="badge badge-eco">Fórmula Base Agua</span>
+                            <span class="badge badge-tech">Multi-superficie</span>
+                        </div>
+                        <h3>Cintas Adhesivas</h3>
+                        <p class="product-desc">Cinta industrial de alto desempeño resistente a la intemperie y humedad tropical. Sellado robusto instantáneo sobre cartón corrugado y liso.</p>
+                        <button class="card-link" onclick="openSpecModal('cintas')">Ver detalles &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Plástico de Burbuja -->
+                <div class="product-card">
+                    <div class="card-top-bar bar-eco"></div>
+                    <div class="card-body">
+                        <div class="color-graphic-placeholder">
+                            <i class="ti ti-shield"></i>
+                        </div>
+                        <div class="badge-container">
+                            <span class="badge badge-eco">Eco-moderno</span>
+                            <span class="badge badge-tech">Protección superior</span>
+                        </div>
+                        <h3>Plástico de Burbuja</h3>
+                        <p class="product-desc">Cojines de aire herméticos de retención superior. Amortiguación técnica diseñada con aditivos biodegradables que optimizan el volumen logístico.</p>
+                        <button class="card-link" onclick="openSpecModal('burbuja')">Ver detalles &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Cartón Perforado -->
+                <div class="product-card">
+                    <div class="card-top-bar bar-eco"></div>
+                    <div class="card-body">
+                        <div class="color-graphic-placeholder">
+                            <i class="ti ti-grid-pattern"></i>
+                        </div>
+                        <div class="badge-container">
+                            <span class="badge badge-eco">100% Compostable</span>
+                            <span class="badge badge-tech">Amortiguación</span>
+                        </div>
+                        <h3>Cartón Perforado</h3>
+                        <p class="product-desc">Cartón kraft corrugado con corte expansible tridimensional. Sustituto sustentable de mallas de espuma plástica que protege envíos contra impactos pesados.</p>
+                        <button class="card-link" onclick="openSpecModal('carton')">Ver detalles &rarr;</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TECH FEATURES SECTION -->
+    <section class="features-section" id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow" style="color: var(--color-accent)">¿POR QUÉ EMPAKIT?</span>
+                <h2>Por qué Empakit es diferente</h2>
+            </div>
+
+            <div class="features-grid">
+                
+                <!-- Block 1 -->
+                <div class="feature-block">
+                    <div class="feature-icon feature-blue">
+                        <i class="ti ti-certificate"></i>
+                    </div>
+                    <div>
+                        <h3>Tecnología verificada</h3>
+                        <p>Nuestros materiales cuentan con certificación de resistencia y consistencia internacional bajo pruebas mecánicas de laboratorio.</p>
+                    </div>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="feature-block">
+                    <div class="feature-icon feature-teal">
+                        <i class="ti ti-truck"></i>
+                    </div>
+                    <div>
+                        <h3>Entrega inteligente</h3>
+                        <p>Gestionamos una red de distribución ágil para despachar y entregar tus insumos en bodegas en menos de 24 horas garantizadas.</p>
+                    </div>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="feature-block">
+                    <div class="feature-icon feature-blue">
+                        <i class="ti ti-users"></i>
+                    </div>
+                    <div>
+                        <h3>Asesoría técnica</h3>
+                        <p>Contamos con ingenieros de campo listos para visitar tu planta, calibrar tus máquinas aplicadoras y optimizar el gramaje de material.</p>
+                    </div>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="feature-block">
+                    <div class="feature-icon feature-teal">
+                        <i class="ti ti-leaf"></i>
+                    </div>
+                    <div>
+                        <h3>Eco-moderno</h3>
+                        <p>Proveemos sostenibilidad real al reducir el tonelaje total de resinas vírgenes de polietileno, sin arriesgar la integridad de la estiba.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. STATS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                
+                <div class="stat-item">
+                    <span class="stat-number">+500</span>
+                    <span class="stat-label">empresas confían</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">+10</span>
+                    <span class="stat-label">años de innovación</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">24h</span>
+                    <span class="stat-label">entrega garantizada</span>
+                </div>
+
+            </div>
+            <span class="stats-tagline">"Líderes en empaque industrial eco-moderno en Guatemala"</span>
+        </div>
+    </section>
+
+    <!-- 6. TECH TRUST SECTION -->
+    <section class="tech-trust-section">
+        <div class="container">
+            <h3 class="tech-trust-title">Compatibles con los estándares de</h3>
+            <div class="standards-row">
+                <div class="standard-badge">ISO 9001</div>
+                <div class="standard-badge">REACH CERTIFIED</div>
+                <div class="standard-badge">RoHS COMPLIANT</div>
+                <div class="standard-badge">FSC SYSTEM</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CTA / CONTACT BANNER -->
+    <section class="cta-banner" id="contacto">
+        <div class="container cta-container">
+            <div class="cta-info">
+                <h2 class="cta-headline">¿Listo para optimizar tu empaque?</h2>
+                <p class="cta-subtext">Cotiza en minutos. Agenda una asesoría técnica en planta y recibe muestras sin compromiso.</p>
+            </div>
+            <div>
+                <a href="https://wa.me/50230467777" class="btn btn-primary cta-btn-xl">
+                    <i class="ti ti-brand-whatsapp"></i> Escribirnos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Col 1 -->
+                <div class="footer-col footer-logo-block">
+                    <a href="#hero" class="logo" aria-label="Volver al inicio - Empakit">
+                        <svg class="logo-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-right: 8px;">
+                            <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 2v10M3 7l9 5 9-5" stroke="currentColor" stroke-dasharray="1.5 1.5" stroke-width="1.5" />
+                            <path d="M12 12c1.8-2 4-2.5 5.5-1.5 1.5 1 1 3.5-.5 5.5s-4 2-5 2c-1 0-2-.5-1.5-2.5.5-2 1.5-3.5 1.5-3.5z" fill="#5DCAA5" />
+                            <circle cx="12" cy="12" r="1" fill="#FFFFFF" />
+                        </svg>
+                        <span>empakit</span><span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">Empaque industrial premium y sustentable. Diseñado para optimizar los procesos logísticos de manufactura y distribución en Guatemala.</p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="#productos">Productos</a></li>
+                        <li class="footer-link-item"><a href="#nosotros">Nosotros</a></li>
+                        <li class="footer-link-item"><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item">
+                            <i class="ti ti-brand-whatsapp"></i>
+                            <span>+502 3046-7777</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="ti ti-mail"></i>
+                            <span>cotizaciones@empakit.gt</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="ti ti-map-pin"></i>
+                            <span>Zona 12, Ciudad de Guatemala</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 Empakit. Todos los derechos reservados.</span>
+                <span class="footer-made">Hecho en Guatemala 🇬🇹</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/50230467777" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
+        <i class="ti ti-brand-whatsapp"></i>
+    </a>
+
+    <!-- INTERACTIVE SPEC MODAL -->
+    <div class="spec-modal" id="specModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Detalles Técnicos</h3>
+                <button class="modal-close" onclick="closeSpecModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="spec-list" id="modalSpecs">
+                    <!-- Dynamic details populated via code -->
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/50230467777" class="btn btn-primary" id="modalCta">
+                        <i class="ti ti-brand-whatsapp"></i> Cotizar este Material
+                    </a>
+                    <button class="btn btn-secondary" onclick="closeSpecModal()">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive script layout -->
+    <script>
+        // 1. Scroll Progress & Sticky Navbar Handler
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            
+            // Toggle scrolled state
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll Progress Calculation
+            var scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress) {
+                var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+                scrollProgress.style.width = scrolled + '%';
+            }
+        });
+
+        // 2. Mobile toggle menu & Click Backdrop
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileDrawer = document.getElementById('mobileDrawer');
+        var mobileBackdrop = document.getElementById('mobileBackdrop');
+
+        menuToggle.addEventListener('click', function() {
+            var isActive = mobileDrawer.classList.toggle('active');
+            var icon = menuToggle.querySelector('i');
+            
+            if (isActive) {
+                icon.className = 'ti ti-x';
+                mobileBackdrop.style.opacity = '1';
+                mobileBackdrop.style.pointerEvents = 'auto';
+                document.body.style.overflow = 'hidden'; // Lock scrolling when menu is active
+            } else {
+                icon.className = 'ti ti-menu-2';
+                mobileBackdrop.style.opacity = '0';
+                mobileBackdrop.style.pointerEvents = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+
+        function closeDrawer() {
+            mobileDrawer.classList.remove('active');
+            menuToggle.querySelector('i').className = 'ti ti-menu-2';
+            mobileBackdrop.style.opacity = '0';
+            mobileBackdrop.style.pointerEvents = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // 3. Navigation Scroll Spy (Active link indicator highlight)
+        var sections = document.querySelectorAll('section[id], header[id]');
+        var navLinks = document.querySelectorAll('.nav-links .nav-link, .mobile-drawer .nav-link');
+
+        var observerOptions = {
+            root: null,
+            rootMargin: '-30% 0px -50% 0px', // Trigger highlight near current scroll window
+            threshold: 0
+        };
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var id = entry.target.getAttribute('id');
+                    if (id) {
+                        navLinks.forEach(function(link) {
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+
+        // 4. Product Specification Data Mapping
+        var specData = {
+            stretch: {
+                title: "Ficha Técnica: Stretch Film Pro",
+                specs: [
+                    { label: "Espesor Nominal", value: "15 micras (Equivalencia mecánica calibre 80)" },
+                    { label: "Capacidad de Pre-estirado", value: "Hasta 300% de elongación certificada" },
+                    { label: "Material Base", value: "Copolímeros LLDPE 100% Reciclables" },
+                    { label: "Resistencia al Rasgado", value: "Excelente memoria e inhibidores de punción" },
+                    { label: "Presentación", value: "Rollos de 18\" y 20\" para uso manual o automático" }
+                ]
+            },
+            cintas: {
+                title: "Ficha Técnica: Cintas Adhesivas Industriales",
+                specs: [
+                    { label: "Adhesión", value: "Fórmula base agua libre de solventes" },
+                    { label: "Espesor Total", value: "45 micras para servicio pesado" },
+                    { label: "Resistencia Térmica", value: "Estable bajo temperaturas extremas (10°C a 60°C)" },
+                    { label: "Anchos Disponibles", value: "2 pulgadas (48mm) y 3 pulgadas (72mm)" },
+                    { label: "Longitud", value: "100 yardas y 1000 yardas para máquinas automáticas" }
+                ]
+            },
+            burbuja: {
+                title: "Ficha Técnica: Plástico de Burbuja",
+                specs: [
+                    { label: "Tamaño de Burbuja", value: "3/16\" (burbuja chica) y 1/2\" (burbuja grande)" },
+                    { label: "Composición", value: "Polietileno de Baja Densidad con aditivo biodegradable" },
+                    { label: "Retención de Aire", value: "Barrera coextruida que previene pérdida de presión" },
+                    { label: "Anchos Estándar", value: "0.5m, 1.0m y 1.25m" },
+                    { label: "Ventaja Ecológica", value: "30% de resina recuperada post-industrial" }
+                ]
+            },
+            carton: {
+                title: "Ficha Técnica: Cartón Perforado Eco",
+                specs: [
+                    { label: "Material Base", value: "Papel Kraft 100% reciclado de fibra larga" },
+                    { label: "Estructura Técnica", value: "Geometría expansible hexagonal (nido de abeja)" },
+                    { label: "Biodegradabilidad", value: "Compostable en 60 días en suelo doméstico (FSC)" },
+                    { label: "Rendimiento", value: "Alta absorción frente a golpes mecánicos repetidos" },
+                    { label: "Presentación", value: "Rollos expandibles de 50cm de ancho y planchas precortadas" }
+                ]
+            }
+        };
+
+        // 5. Hero Carousel Controller
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('.carousel-slide');
+        var dots = document.querySelectorAll('.carousel-dot');
+        var track = document.getElementById('carouselTrack');
+        var totalSlides = slides.length;
+        var autoplayInterval;
+
+        function updateCarousel() {
+            // Sliding action using CSS translateX
+            if (track) {
+                track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            }
+            
+            // Toggle active classes for scale transition
+            slides.forEach(function(slide, idx) {
+                if (idx === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            dots.forEach(function(dot, idx) {
+                if (idx === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, 5000); // Automatically transition every 5 seconds
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+
+        // Initialize Carousel Autoplay
+        startAutoplay();
+
+        // Pause autoplay on hovering for focused reading
+        var carouselEl = document.getElementById('heroCarousel');
+        if (carouselEl) {
+            carouselEl.addEventListener('mouseenter', function() {
+                clearInterval(autoplayInterval);
+            });
+            carouselEl.addEventListener('mouseleave', function() {
+                startAutoplay();
+            });
+        }
+
+        // Open Specification Modal
+        function openSpecModal(productId) {
+            var data = specData[productId];
+            if (!data) return;
+
+            document.getElementById('modalTitle').textContent = data.title;
+            
+            var specsContainer = document.getElementById('modalSpecs');
+            specsContainer.innerHTML = ''; // Clear prior entries
+
+            data.specs.forEach(function(item) {
+                var specItemDiv = document.createElement('div');
+                specItemDiv.className = 'spec-item';
+
+                var labelSpan = document.createElement('span');
+                labelSpan.className = 'spec-label';
+                labelSpan.textContent = item.label;
+
+                var valueSpan = document.createElement('span');
+                valueSpan.className = 'spec-value';
+                valueSpan.textContent = item.value;
+
+                specItemDiv.appendChild(labelSpan);
+                specItemDiv.appendChild(valueSpan);
+                specsContainer.appendChild(specItemDiv);
+            });
+
+            // General quote message modifier
+            var whatsappBtn = document.getElementById('modalCta');
+            whatsappBtn.href = "https://wa.me/50230467777?text=Hola%20Empakit%2C%20quisiera%20cotizar%20el%20producto%3A%20" + encodeURIComponent(data.title);
+
+            document.getElementById('specModal').classList.add('active');
+        }
+
+        // Close Specification Modal
+        function closeSpecModal() {
+            document.getElementById('specModal').classList.remove('active');
+        }
+
+        // Close modal on click outside content
+        window.addEventListener('click', function(event) {
+            var modal = document.getElementById('specModal');
+            if (event.target === modal) {
+                closeSpecModal();
+            }
+        });
+    </script>
+</body>
+</html>

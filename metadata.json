@@ -2,5 +2,5 @@
   "name": "Empakit - Empaque Industrial en Guatemala",
   "description": "Líderes en empaque industrial eco-moderno en Guatemala. Stretch film, cintas adhesivas y plástico de burbuja sustentable.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
